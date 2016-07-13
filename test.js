@@ -8,12 +8,12 @@ var opts = {
 };
 var client = new activiti(opts);
 
-client.startProcessByKey('create_new_portal_user')
-    .then(function(result){
-        console.log(JSON.stringify(result));
-    })
-    .fail(console.log)
-    .done();
+// client.startProcessByKey('create_new_portal_user')
+//     .then(function(result){
+//         console.log(JSON.stringify(result));
+//     })
+//     .fail(console.log)
+//     .done();
 
 // client.runtimeTasks('5018')
 //     .then(function(result){
@@ -45,3 +45,9 @@ client.startProcessByKey('create_new_portal_user')
 //     .done();
 
     
+client.getRuntimeTask('5095')
+    .then(function(result){
+        console.log(JSON.stringify(result));
+    })
+    .fail(console.log)
+    .done();
